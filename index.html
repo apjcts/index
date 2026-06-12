@@ -1,96 +1,75 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <meta charset="UTF-8"/>
-    <title>ap index</title>
-</head>
+<title>ap index</title>                      
 <style>
-b {font-weight:800}
-h1,h2,tester {margin:0px}
-#c {text-align: center;}
-#w {color:darkgray}
-tester {font-family:futura-thin}
-compaq  {font-family:compaqport}
-toshiba {font-family:toshibasat}
-p {color:#0e809d ; margin:0px ; text-align:justify; font-family:futura-thin}
-small {font-size:20px}
-smaller {font-size:16px}
-code {font-size:30px}
-pre {border:5px dashed #131313; padding:0px}
-/*pre:hover {border:5px solid #121212; padding:0px}*/
-ul,li {border:0px red solid; padding:0.2em; list-style: none;}    
-body {background-color:#121212}
-a,a:hover,a:visited {background-color: #222227;  padding:2px; inline-size: 12px; text-decoration: none;}
-a{color:dodgerblue; border: #1f1f2f 2px dashed; }
-a:hover{border: orangered 3px dashed; border-bottom: dodgerblue 3px dashed; font-weight: bolder}
-a:visited{color:#8c61d2;}
-#blk {color:#1a1f1f}
-#blu {color:#0e809d}
-#red {color: #af343c}
-#org {color: #aa6f00}
-#ord {color: #af4500}
-h1 {color: #a46}
-h2 {color: #4a9}
-@font-face {font-family: 'compaqport';src:url(Web437_Compaq_Port3.woff)}
-@font-face {font-family: 'toshibasat';src: url(Web437_ToshibaSat_8x16.woff);}
-@font-face {
-  font-family: 'futura-thin';
-    src:  url('Futura-Thin.ttf.woff') format('woff'),
-/*    url('Futura-Thin.ttf.svg#Futura-Thin') format('svg'),
-    url('Futura-Thin.ttf.eot'),
-    url('Futura-Thin.eot?#iefix')*/ 
-    format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;}
+        /*root*/
+	h2{color:#aaa}
+	code{color:#aaa}
+	body{background-color:#121220}
+	p{color:#5a5a5a; text-align:justify}
+	a{text-decoration:none; color:#0f5a9f}
+	li{list-style-type: none}
+
+	/*left-side related shit*/
+	#temp {margin-left:1em; border-left:#fff 4px solid; background: linear-gradient(90deg, #ffffffaa,#00000001); float:left}
+	#bg1 {background-color: #0f0f0f; font-size:1.5em; padding:10px; border: solid #2a2a2a}
+	#bq{font-size:24px; background-color:#0f0f1a; color:#949494; margin-left:6px; margin-right:6px; padding:2px; font-family:Times; float:left}
+
+	/*new stuff*/
+	#txt000 {color: #1a1a00; padding: 0.955em}
+	#txt001 {color: #ffff00; padding: 0.955em}
+	#ttlbase {border: solid 2px #0a0a0a; background-color:#222; text-align:center}
+	#tlbg01 {border-top:solid 4px #ff09; float:left; background-color:#ff05; text-align:center}
+	#tlbg02 {border-top:solid 4px #ffa3; float:left; background-color:#ffa1; text-align:center}
+
+	/*other div shit*/
+	#pagehead { border-top:solid 4px #f0209f; float:left; background-color:#0a0a9f50; text-align:center}
+	#topleftpagehead { border-top:solid 4px #f0209f; float:left; background-color:#0a0a9f50; text-align:center}
+	#ttl1a  {color: #00f; font-size: 2.5em; text-align:center; padding: 0.09em}
+	#top1a {color: #0aa; float: right; background-color: #0000ff25; border: solid #00f 4px; padding:0.5em; margin:1em}
+	#top1aa {color: #207f9f; float: right; background-color: #00009f00; border: solid #00009f00 4px; padding:0.5em; margin:1em}
+	#top1b {float: left; background-color: #0000ff25; border: solid #00f 4px; padding:0.5em; margin:1em}
+	#top1c {float: center; background-color: #0000ff25; border: solid #00f 4px; padding:0.5em; margin:1em}
+	
+	/*title*/
+	#ttltxt1 {color:#fa90fa; padding:0px }
+	#ttltxt2 {color:#fafa90; padding:0px }
+	#ttltxt3 {color:#fffa00; padding:0px }
+
+	/*older v2 stuff*/
+	#br{float:right}
+	#bl{font-size:32px;background-color:#0f0f1a; color:#949494; float:left; margin:10px; ;padding:12px; border: 4px double dodgerblue }
+	#nocolw {color:#dfaf0f}                                    
+	#nocol {color:#808080}                                    
+	#tx4 {color:#4f4f2f; background-color: #333; padding-left:24px;padding-top:4px;padding-bottom:4px;font-size:20px;margin:-22px}
+
+	/* index v1 stuff*/
+	#lfb {float:left; background-color:#2a2a3f; width: 128px; border: double #0ff 4px; align-items: center;}
+	#ttl2 {color: green; float:right; background-color:#2a4a0f; }
+	#nodeco {background-color:#301010; text-decoration:none; color:#10f031;}
+	#nodeco2 {background-color:#301010; text-decoration:none; color:#f0f031;}
+	#nodeco3 {background-color:#301010; text-decoration:none; color:#fff031;}
+	#ttl {color: ivory; text-align:center; padding-left:8px; padding-top:16px; padding-bottom:16px; background-color: blue; border: double #9ff}
+	#tx1 {color: #5a5a5a}
+	#tx1a {color: #5a5a5a; text-align:center}
+	#tx2 {color: #1a5a5a}
+	#tx3 {color: #1a3a5d}
+	#dull {color: #333}
+	#red {color: firebrick}
+	#bg2 {background-color: #112; font-size:1.5em; padding:20px; border: solid #2a2a3a}
+	#bg3 {background-color: #121232; padding:0.35em; border: solid orange}                                                            
 </style>
+</head>
 
 <body>
-    <h1><tester><toshiba>►</toshiba>main page</tester><toshiba>◄</toshiba>
-    <h2 id="blu"><tester>recommended zoom levels: 100% & 200%</tester> <br>
-    <!--small><tester style="color:#a46">I will <b>NOT</b> make this page <i>~responsive~ </i><compaq>☺ ☻</compaq></tester></small-->    </h2> 
-    <hr>
-    <ul>
-    <code>
-    <a title="ap on bandcamp" href="https://alternative192.bandcamp.com/">bandcamp</a>
-    <a title="ap on bandcamp" href="https://soundcloud.com/alt-383907550">soundcloud (old)</a>
-    <a title="ap on bandcamp" href="https://soundcloud.com/april_kelli">soundcloud (new)</a>
-    <a title="ap1 on yt" href="https://www.youtube.com/user/AltJustAlt/videos">1st youtube page</a>
-    <a title="ap2 on yt" href="https://www.youtube.com/channel/UCVwm2FUipJ-HXhNFffoLRdg/videos">2nd youtube page</a>
-    <a title="ap3 on yt" href="https://www.youtube.com/@apjcts3/featured">3rd youtube page</a>
-    <a title="ap on moddb" href="https://www.moddb.com/members/alt2">moddb page</a>
-    <a title="ap on github" href="https://github.com/apjcts">github page</a>
-    <a title="ap on itch" href="https://mastodon.social/@aprilkelli">mastodon page</a>
-    <a title="ap on itch" href="https://bsky.app/profile/ap94.bsky.social">bluesky page</a>
-    <!--a title="ap on gamebanana" href="https://gamebanana.com/members/1432880">ap's gamebanana page</a-->
-    <!--a title="ap on itch" href="https://apjcts.itch.io/">itch.io page</a-->
-    <!--a title="ap on tmblr" href="https://www.tumblr.com/blog/aprjcts">apt</a-->
-    <pre></pre>
-    <!--
-    <hr id="blu">
-    <h2 id="c"> <toshiba> -- STARTER -- </toshiba></h2>
-    <hr id="blu">
-    <p><tester id="w">"What the heck is this?" - </tester> a web page.</p>
-    <p><tester id="w">"Why did you make this?" - </tester> linktr.ee is lame.</p>
-    <p><tester id="w">"Why on github?" - </tester> you expecting me to <b>pay</b> for <b>hosting</b> a website?</p>
-    <p><tester id="w">"Why not accept my <smaller><compaq>[opinion about subject]</compaq></smaller>? " - </tester>
-    Because your <smaller><compaq>[opinion]</compaq></smaller> is <compaq><small>[☺]</small></compaq></p>
-    <p><tester id="w"><small>"Why are you against<compaq> [insert new obsession here]</compaq>?"</small> - </tester> <small>I just hate it. No need for reasons when you hate things.</small></p>
-    <p><tester id="w">"Why make things?" - </tester> No reason <small><del>(obviously to show off)</del></small>.</p>
-    <p><tester id="w">"What do you show off?" - </tester> Nothing of value to anyone but myself.</p>
-    <p><tester id="w">"What do you do?" - </tester>Anything NOT related to businesses or politics.</p>
-    <p><tester id="w">"Does that include anything illegal?" - </tester>No. It does not.</p>
-    <p><tester id="w">"So you can't do anything at all, then?" - </tester> That depends on what is needed.</p>
-    <p><tester id="w">"Can I pay you for doing it?" - </tester>No. You can not.</p>
-    <p><tester id="w">"Build me an airplane." - </tester>Build one yourself, ASMD.</p>
-    -->
-    <pre></pre>
-    <hr id="red">
-    <hr id="org">
-    <hr id="ord">
-
-</ul></code>
-
+<h2>ap</h2>
+<ul>
+	<li><a title="youtube" href="https://www.youtube.com/@april_kelli">first yt</a> </li>
+	<li><a title="youtube" href="https://www.youtube.com/@apjcts2">second yt</a> </li>
+	<li><a title="youtube" href="https://www.youtube.com/@apjcts3">third yt</a> </li>
+	<li><a title="soundcloud" href="https://soundcloud.com/alt-383907550">old SC</a> </li>
+	<li><a title="soundcloud" href="https://soundcloud.com/april_kelli">new SC</a> </li>
+	<li><a title="mastodon" href="https://mastodon.social/@aprilkelli">mastodon</a> </li>
+	<li><a title="bluesky" href="https://bsky.app/profile/ap94.bsky.social">bluesky</a> </li>
+	<li><a href="https://www.moddb.com/members/alt2">moddb</a></li>
+</ul>
 </body>
-</html>
-
-
